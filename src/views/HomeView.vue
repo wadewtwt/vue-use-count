@@ -15,7 +15,7 @@
         <el-date-picker
           v-model="monthValue"
           type="month"
-          value-format="yyyy-MM-dd HH:mm:ss"
+          value-format="yyyy-MM-dd"
           placeholder="选择月">
         </el-date-picker>
         <!--      月份热图-->
@@ -31,8 +31,7 @@
           <el-date-picker
             v-model="dayValue"
             type="date"
-            format="yyyy-MM-dd"
-            value-format="yyyy-MM-dd HH:mm:ss"
+
             placeholder="选择日期">
           </el-date-picker>
         </div>
@@ -57,24 +56,13 @@ export default {
     return {
       rootUrl: "",
       active: 0,
-      dayValue: '',
-      monthValue: '2024-05-20 10:00:00',
+      dayValue: null,
+      monthValue: '2024-05-20',
       temperatureList: [],
       uniqueCode: ''
     };
   },
   watch: {
-    dayValue(newValue, oldValue){
-      if (oldValue === ""){
-        return
-      }
-      console.log("dayValue newValue:"+newValue+",oldValue:"+oldValue)
-      let postForm= {
-        "date": newValue,
-        "uniqueCode": this.uniqueCode
-      }
-      this.handleTemperatureBattery(postForm)
-    },
     monthValue(newValue, oldValue){
       if (oldValue === ""){
         return
@@ -91,9 +79,6 @@ export default {
     this.uniqueCode = "xxx"
   },
   mounted() {
-    this.dayValue = this.getCurrentDate()
-    this.monthValue = this.getCurrentDate()
-
     let postForm= {
       "date": this.dayValue,
       "uniqueCode": this.uniqueCode

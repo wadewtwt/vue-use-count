@@ -23,7 +23,7 @@
                 <!--							<li class="green"> 大一点-->
 
                 <li v-for="(item, index) in list" v-show="index<num">
-                  <img v-if="index === 0" src="/static/img/new.png" style="width: 80px">
+                  <img v-if="index === 0" src="../static/img/new.png" style="width: 80px">
                   <h3>
                     <span>版本号</span>{{ item.versionNumber }}
                   </h3>
@@ -62,8 +62,6 @@
 
 <script>
 // import {fetchList} from "@/api/downloadPage";
-// import '@../static/css/tab.css';
-// import "@../static/css/process.css";
 
 const defaultForm = {
   pageNo: 1,
