@@ -18,7 +18,7 @@
             <div class="history-date">
               <ul>
                 <h2 class="first">
-                  <a href="javascript:void(0)">Release</a><img src="/static/img/img051.gif" alt="360极速浏览器历程" />
+                  <a href="javascript:void(0)">Release</a><img src="../static/img/img051.gif" alt="发展logo" />
                 </h2>
                 <!--							<li class="green"> 大一点-->
 
