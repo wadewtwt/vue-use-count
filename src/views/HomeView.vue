@@ -74,6 +74,7 @@ export default {
       }
       this.handleDuration(postForm)
     }
+    // 同理变更日期
   },
   created() {
     this.uniqueCode = "xxx"
@@ -97,6 +98,7 @@ export default {
 
       // $.get(this.rootUrl + '/data/asset/data/aqi-beijing.json', durationPostForm, function (res) {
 
+      // 这个是后端返回的格式要求
         let durationRemoteResult = [
           [
             "2024-05-01",
@@ -226,7 +228,7 @@ export default {
         console.log("durationRemoteResult is：")
         console.log(durationRemoteResult)
 
-        if (durationRemoteResult === null || durationRemoteResult.length === 0){
+        if (durationRemoteResult.length === 0){
           this.$message({
             message: '根据【月份】拉取数据为空',
             type: 'warning'
