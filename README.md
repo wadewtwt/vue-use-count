@@ -6,7 +6,7 @@ A simple project using Vue, one is used to display device usage hotspots and tem
 ## Result demonstration
 ![image](https://github.com/wadewtwt/vue-use-count/blob/main/src/static/img/gif1.gif)
 
-
+![image](https://github.com/wadewtwt/vue-use-count/blob/main/src/static/img/gif2.gif)
 ![](D:\work\front\vue-use-count\src\static\img\gif2.gif)
 ## Project setup
 ```
