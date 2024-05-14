@@ -72,7 +72,7 @@ export default {
         "date": newValue,
         "uniqueCode": this.uniqueCode
       }
-      this.handleDuration(postForm)
+      // this.handleDuration(postForm)
     }
     // 同理变更日期
   },
