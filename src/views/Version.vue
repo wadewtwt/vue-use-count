@@ -83,16 +83,17 @@ export default {
     }
   },
   methods:{
-    fetchData() {
+    fetchData(id) {
       this.listLoading = true
       // fetchList(this.postForm).then(response => {
+
         this.list = [
           {
             "id": 34,
             "versionNumber": "1.0.7.2",
             "versionNumberDouble": 1.072,
             "alias": "1.0.7.2",
-            "description": "增加深度判断",
+            "description": "增加深度判断id:" + id,
             "downloadUrl": "https://www.xxx.com/app/backend/2023/12/07/一个应用app1.0.7.2.apk",
             "sizeStr": "81.34MB",
             "appId": 1,
@@ -109,7 +110,7 @@ export default {
             "versionNumber": "1.0.7.1",
             "versionNumberDouble": 1.071,
             "alias": "1.0.7.1版本",
-            "description": "增加深度判断",
+            "description": "增加深度判断id:"+ id,
             "downloadUrl": "https://www.xxx.com/app/backend/2023/12/07/一个应用app1.0.7.1.apk",
             "sizeStr": "47.79MB",
             "appId": 1,
@@ -126,7 +127,7 @@ export default {
             "versionNumber": "1.0.6",
             "versionNumberDouble": 1.06,
             "alias": "一个应用演示Demo",
-            "description": "v1.0.增加深度判断",
+            "description": "v1.0.增加深度判断id:"+ id,
             "downloadUrl": "https://www.xxx.com/app/backend/2023/12/07/一个应用app1.0.6.apk",
             "sizeStr": "47.77MB",
             "appId": 1,
@@ -201,13 +202,17 @@ export default {
       }
       e.currentTarget.classList.add('current')
       // 拉最新数据
-      this.fetchData()
+
+      this.fetchData(id)
+
+
       // 使下拉都收起
       this.num = 1;
       this.moreTxt = '显示全部';
       console.log("切换了，isShow现在是：" + this.isShow + ",而我现在要改成false")
       this.isShow = true
     },
+
     handleMore(){
       console.log("点击更多了，现在isShow是：" + this.isShow)
 
@@ -222,7 +227,7 @@ export default {
     this.baseUrl = process.env.VUE_APP_BASE_API
 
     // ajax请求数据
-    this.fetchData()
+    this.fetchData(1)
 
     // 加载多个js到页面中
     var arrUrl = [

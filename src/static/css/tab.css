@@ -42,7 +42,7 @@ nav li {
 }
 
 
-.current {
+.current a{
   color: #00bbff;
   /*background: greenyellow;*/
 }
